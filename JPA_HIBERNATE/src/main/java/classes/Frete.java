@@ -1,5 +1,7 @@
 package classes;
 
+import repositorio.RepositorioCidade;
+
 import javax.persistence.*;
 import java.io.Serializable;
 
@@ -72,8 +74,14 @@ public class Frete implements Serializable {
         return valor;
     }
 
-    public void setValor(float valor) {
-        this.valor = valor;
+//    public void setValor(float valor) {
+//        this.valor = valor;
+//    }
+    public void setValor(float valor, Integer id) {
+        RepositorioCidade repositorioCidade = new RepositorioCidade();
+
+        Cidade cidade = repositorioCidade.buscarPorId(id);
+        this.valor = (peso * 10) + cidade.getTaxa();
     }
 
     public Cliente getCliente() {

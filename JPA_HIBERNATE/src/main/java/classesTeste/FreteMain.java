@@ -36,9 +36,9 @@ public class FreteMain {
         cliente.setIdCliente(1);
         Cidade cidade = new Cidade();
         cidade.setIdCidade(1);
-        f.setDescricao("CIF/FOB");
-        f.setPeso(3200f);
-        f.setValor(530.00f);
+        f.setDescricao("CIF");
+        f.setPeso(10f);
+        f.setValor(20f, 1);
         f.setCliente(cliente);
         f.setCidade(cidade);
 
