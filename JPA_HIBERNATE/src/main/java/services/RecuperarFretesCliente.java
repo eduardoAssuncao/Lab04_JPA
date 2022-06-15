@@ -17,7 +17,7 @@ public class RecuperarFretesCliente {
         em = emf.createEntityManager();
     }
 
-    public Frete buscarFretePorId(Integer id) {
+    public Frete buscarFreteCLientePorId(Integer id) {
         em.getTransaction().begin();
         Frete frete = em.find(Frete.class, id);
         em.getTransaction().commit();
@@ -26,9 +26,9 @@ public class RecuperarFretesCliente {
     }
 
     @SuppressWarnings("unchecked")
-    public List<Frete> listarFretesCliente(int id) {
+    public List<Frete> listarFretesCliente() {
         em.getTransaction().begin();
-        Query consulta = em.createQuery("select frete from Frete frete where idCliente = id");
+        Query consulta = em.createQuery("select frete from Frete frete where idCliente = 1");
         List<Frete> fretes = consulta.getResultList();
         em.getTransaction().commit();
         emf.close();

@@ -4,6 +4,7 @@ import classes.Cidade;
 import classes.Cliente;
 import classes.Frete;
 import repositorio.RepositorioFrete;
+import services.RecuperarFretesCliente;
 import services.RecuperarValorFrete;
 
 import java.util.List;
@@ -71,5 +72,13 @@ public class FreteMain {
         Frete frete = recuperarValorFrete.buscarFretePorId(9);
 
         System.out.println(frete);*/
+
+        //LISTAR TODOS OS FRETES
+        RecuperarFretesCliente recuperarFretesCliente = new RecuperarFretesCliente();
+        List<Frete> fretes = recuperarFretesCliente.listarFretesCliente();
+
+        for (Frete frete : fretes) {
+            System.out.println(frete);
+        }
     }
 }
