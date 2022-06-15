@@ -27,13 +27,13 @@ public class CidadeMain {
         //-----------------------------------//
 
         //ADICIONANDO CIDADE AO BANCO
-        RepositorioCidade repositorioCidade = new RepositorioCidade();
+        /*RepositorioCidade repositorioCidade = new RepositorioCidade();
         Cidade c = new Cidade();
-        c.setNome("São Paulo");
-        c.setTaxa(50.00f);
-        c.setUF("SP");
+        c.setNome("Santa Catarina");
+        c.setTaxa(120.00f);
+        c.setUF("SC");
 
-        repositorioCidade.salvar(c);
+        repositorioCidade.salvar(c);*/
 
         //-----------------------------------//
 

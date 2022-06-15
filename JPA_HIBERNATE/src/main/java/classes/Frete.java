@@ -102,13 +102,12 @@ public class Frete implements Serializable {
 
     @Override
     public String toString() {
+        return "\nVALOR FRETE -> " + "{ID = " + idFrete+"}" + "{Valor = " + valor+"}";
+    }
+
+    public String retornarValores(){
         return "Frete{" +
-                "idFrete=" + idFrete +
-                ", descricao='" + descricao + '\'' +
-                ", peso=" + peso +
                 ", valor=" + valor +
-                ", cliente=" + cliente +
-                ", cidade=" + cidade +
                 '}';
     }
 }

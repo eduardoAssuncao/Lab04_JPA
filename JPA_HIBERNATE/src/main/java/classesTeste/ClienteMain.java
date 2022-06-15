@@ -31,10 +31,10 @@ public class ClienteMain {
         //-----------------------------------//
 
         //ADICIONANDO CLIENTE AO BANCO
-        RepositorioCliente repositorioCliente = new RepositorioCliente();
-        Cliente c2 = new Cliente(null, "Eduardo", "Cohama", "999");
+        /*RepositorioCliente repositorioCliente = new RepositorioCliente();
+        Cliente c2 = new Cliente(null, "Carla", "Monte Castelo", "989778384");
 
-        repositorioCliente.salvar(c2);
+        repositorioCliente.salvar(c2);*/
 
         //-----------------------------------//
 
