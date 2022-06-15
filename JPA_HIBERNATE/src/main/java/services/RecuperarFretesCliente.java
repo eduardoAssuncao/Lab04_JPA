@@ -1,6 +1,8 @@
 package services;
 
+import classes.Cliente;
 import classes.Frete;
+import org.hibernate.query.QueryParameter;
 
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
@@ -17,19 +19,11 @@ public class RecuperarFretesCliente {
         em = emf.createEntityManager();
     }
 
-    public Frete buscarFreteCLientePorId(Integer id) {
-        em.getTransaction().begin();
-        Frete frete = em.find(Frete.class, id);
-        em.getTransaction().commit();
-        //emf.close();
-        return frete;
-    }
-
     @SuppressWarnings("unchecked")
-    public List<Frete> listarFretesCliente() {
+    public List<Frete> listarFretesCliente(int id) {
         em.getTransaction().begin();
-        Query consulta = em.createQuery("select frete from Frete frete where idCliente = 1");
-        List<Frete> fretes = consulta.getResultList();
+        Query consulta = em.createQuery("select frete from Frete frete where idCliente = :idCliente");
+        List<Frete> fretes = consulta.setParameter("idCliente", id).getResultList();
         em.getTransaction().commit();
         emf.close();
         return fretes;

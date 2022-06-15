@@ -73,12 +73,22 @@ public class FreteMain {
 
         System.out.println(frete);*/
 
-        //LISTAR TODOS OS FRETES
-        RecuperarFretesCliente recuperarFretesCliente = new RecuperarFretesCliente();
-        List<Frete> fretes = recuperarFretesCliente.listarFretesCliente();
+        //-----------------------------------//
+
+        //RECUPERAR FRETE PELO ID DO FRETE
+        /*RecuperarValorFrete recuperarValorFrete = new RecuperarValorFrete();
+        List<Frete> frete = recuperarValorFrete.listarFretesPorId(12);
+
+        System.out.println(frete);*/
+
+        //-----------------------------------//
+
+        //LISTAR TODOS OS FRETES DE UM DETERMINADO CLIENTE
+        /*RecuperarFretesCliente recuperarFretesCliente = new RecuperarFretesCliente();
+        List<Frete> fretes = recuperarFretesCliente.listarFretesCliente(2);
 
         for (Frete frete : fretes) {
             System.out.println(frete);
-        }
+        }*/
     }
 }

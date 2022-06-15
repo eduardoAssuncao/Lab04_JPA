@@ -34,4 +34,14 @@ public class RecuperarValorFrete {
         emf.close();
         return fretes;
     }
+
+    @SuppressWarnings("unchecked")
+    public List<Frete> listarFretesPorId(int id) {
+        em.getTransaction().begin();
+        Query consulta = em.createQuery("select valor from Frete valor where idFrete = :idFrete");
+        List<Frete> fretes = consulta.setParameter("idFrete", id).getResultList();
+        em.getTransaction().commit();
+        emf.close();
+        return fretes;
+    }
 }
